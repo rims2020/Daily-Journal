@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= text1 %><p> <br>
+<a id="buttonlink" href="/compose"><button type="button" id="compose" class="btn btn-outline-dark">COMPOSE</button></a>
+<% text10.forEach(function(element) { %>
+<p><h1><%= element.heading%></h1><p>
+<p><%= element.writeup.substring(0,160) %> <a href="/posts/<%= element.heading %>"> Read more</a><p>
+
+<% }) %>
+
+<%- include("partials/footer") -%>
