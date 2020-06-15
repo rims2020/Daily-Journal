@@ -16,7 +16,6 @@ app.use(express.static("public")); //remember
 
 mongoose.connect("mongodb+srv://admin:testone@cluster0-hhnl7.mongodb.net/contentDB",{useNewUrlParser:true})
 
-var posts=[];
 
 
 const postSchema={
@@ -61,7 +60,7 @@ app.post("/", function(req,res)
     post: req.body.text7
 
   }
-posts.push(content)
+
 const item=new Post({
   heading: content.posttitle,
   writeup: content.post
